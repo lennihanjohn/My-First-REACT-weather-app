@@ -1,13 +1,9 @@
 import React from 'react';
+
 class CapitalizedText extends React.Component {
 
-  render() {
-    return (
-      jsUcfirst(this.props.text)
-    );
-  }
-};
-function jsUcfirst(str) {
+  // upper-case the string
+  jsUcfirst(str) {
     var splitStr = (str || "").toLowerCase().split(' ');
     // loop each string and capitalized
     for (var i = 0; i < splitStr.length; i++) {
@@ -15,5 +11,13 @@ function jsUcfirst(str) {
     }
     // Directly return the joined string
     return splitStr.join(' '); 
-}
+  }
+  
+  render() {
+    return (
+      this.jsUcfirst(this.props.text)
+    );
+  }
+};
+
 export default CapitalizedText;

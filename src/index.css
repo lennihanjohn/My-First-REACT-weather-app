@@ -4,10 +4,11 @@ html {
 
 #root {
   background: #e9ecef;
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
+#frame{
+  height: 750px;
+}
 
 button{
   background-color: #008CBA;
@@ -27,9 +28,8 @@ button{
 }
 
 .detail-card {
-  min-height: 461px;
+  min-height: 600px;
   margin-right: 1rem;
-
  }
 
 .my-locations{
@@ -76,12 +76,28 @@ label + input[type="radio"] + .radio-label {
   width: 15%;
   height: auto;
 }
+
 .detail-img{
   width: 100%;
   height: auto;
 }
+.scrollbar {
+  height:  555px;
+  overflow-y: scroll;
+}
 
 @media (max-width: 600px) { 
+  /* #frame{
+    height: auto;
+  } */
+  .detail-card {
+    min-height: 300px
+   }
+  .scrollbar {
+    height:  150px;
+    overflow-y: scroll;
+  }
+
   .mobile-order{
     display: flex !important;
     flex-direction: row !important;
@@ -95,7 +111,6 @@ label + input[type="radio"] + .radio-label {
   
   .detail-card {
     margin-right: 0rem;
-  
-   }
+  }
   
 }

@@ -33,13 +33,13 @@ import DetailCard from './components/detail_card.js'
 
     render() {
       return (
-        <div >
+        <div id='frame'>
             <Header onChange={this.onUnitChanged.bind(this)}/>
             <div className="row mobile-order">
                 <div id="list-card" className="col-sm-4 col-xs-12">
                     <div className="card list-card">
                         <h5 className="card-header bg-white">My Locations</h5>
-                        <div className="list-group">
+                        <div className="list-group overflow-auto scrollbar">
                             <ListCard onClick={this.onClick.bind(this)} />
                         </div>
                     </div>

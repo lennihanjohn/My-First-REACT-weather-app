@@ -1,9 +1,11 @@
 import React from 'react';
 
 class RadioButton extends React.Component {
+    // pass the change to parent 
     handleChange(e) {
       this.props.onChange(e.target.value);    
     }
+
     render() {  
       return (  
         <div className="float-right radio-group" onChange={this.handleChange.bind(this)}>

@@ -1,9 +1,13 @@
 import React from 'react';
 import RadioButton from './radio_button.js'
+
 class Header extends React.Component {
+  
+  // pass the value to parent if the temp unit changes
   onChange = (temp) => {
     this.props.onChange(temp);    
   }
+
   render() {  
     return (
       <div className="header" >
@@ -17,5 +21,4 @@ class Header extends React.Component {
   }
 }
   
-
 export default Header;
